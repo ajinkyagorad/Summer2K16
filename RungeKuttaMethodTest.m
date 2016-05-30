@@ -9,12 +9,13 @@
 %-----------------------------------
 clear;
 h = 0.01;
-y = 0; % initial value
+y = 2; % initial value
 y_old = y; 
 A=0;
 for n = 0:1000;
     y = y_old+h*f(n*h+0.5*h,y_old*h*f(n*h,y_old));
     A=[A y];
+    y_old=y;
 end
 plot(A);
     
