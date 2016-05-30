@@ -1,6 +1,7 @@
 #Spiking Neural Network Simulation
-* Hodgekin Huxley Model
-1. Runge-Kutta Method for solving differential equation
-2. Solving simplified Neural Equation
-3. Implementing a single neuron in Hodgekin Huxlin Model
+
+* Leaky Integrate and Fire Model
+* ![Runge-Kutta Method](https://en.wikipedia.org/wiki/Runge–Kutta_methods) for solving differential equation 
+* Solving simplified Neural Equation
+* Implementing a single neuron
 
