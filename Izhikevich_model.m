@@ -1,0 +1,1 @@
+% Init Neuron Type values
