@@ -5,9 +5,9 @@ C  = 300*10^-12 ;% Farad
 VT = 20*10^-3 ;% Volts
 
 % inputs
-M = 500/0.1 ; % no. of columns (no. of delta_T time intervals that amount to T)  
+M = 200/0.1 ; % no. of columns (no. of delta_T time intervals that amount to T)  
 N = 2 ; % no. of rows (no. of neurons) 
-T = 0.5 ; % the time upto which the expt is performed
+T = 0.2 ; % the time upto which the expt is performed
 h = 0.0001 ; % delta_T
 
 % input current matrix
@@ -23,11 +23,6 @@ B = gL*EL ;
 
 y = zeros(N,M);
 % init condition
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 6eedc0bb8bb23e467b382fc004c19ee78529c5eb
 y(:,1) = EL; 
 
 %runge kutta implementation
@@ -36,14 +31,12 @@ for i = 1:M-1
     y1 = y(:,i) + k1*h ;                    % LHS @t = t0 + h
     k2 = -A*y1 + ( B + I(:,i+1) )/C;        % RHS @t = t0 + h
     y(:,i+1) = y(:,i) + 0.5*(k1+k2)*h ;     % @t = t0 + h
-<<<<<<< HEAD
     y( (y(:,i+1)>=VT) ,i+1) = EL;
-=======
     y((y(:,i+1)>=VT),i+1) = EL;
->>>>>>> 6eedc0bb8bb23e467b382fc004c19ee78529c5eb
+
 end
 
-t = 0.1:0.1:500;
+t = 0.1:0.1:200;
 
 figure(1)
 for i=1:N

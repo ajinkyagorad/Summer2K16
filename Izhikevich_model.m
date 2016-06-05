@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 % Init Neuron Type values
 %C(pF) kz(?S/V) Er(mV) Et(mV) a (KHz) b(nS) c(mV) d(pA) vpeak(mV)
 type = 'RS';
@@ -13,18 +12,18 @@ elseif type == 'CH'
    b =  1E-9;   c =  -40E-3;   d =  150E-12;   Vpeak=25E-3;
 end
 
-N = 10; % No of neurons
+N = 7; % No of neurons
 h = 0.1E-3; % time step
-Tmax = 0.5; %max time
-M = Tmax/h; % max time index i.e no. of columns (no. of delta_T time intervals that amount to T)
+Tmax = 0.2; %max time
+M = ceil(Tmax/h); % max time index i.e no. of columns (no. of delta_T time intervals that amount to T)
 
-% input current matrix
+% input current matrixs
     %Ic = gL*(VT-EL) ; %considering Ic = 1
     %alpha = 0.1;
 I = zeros(N,M);
 for i = 1:N
-    I(i,1:M) = 75*10^-12 ; %(1 + alpha*i)*Ic;
-    % I(i,1:M) = 500*10^-12 ;
+    %I(i,1:M) = 400^-12 ; %(1 + alpha*i)*Ic;
+     I(i,1:M) = 20*i*10^-12 ;
     % I(i,1:M) = 600*10^-12 ;
 end
 
@@ -56,17 +55,13 @@ for i = 1:M-1
     U((y(:,i+1)>=Vpeak),i+1) = U((y(:,i+1)>=Vpeak),i+1) + d;
 end
 
-t = 0.1:0.1:500;
+t = h:h:Tmax;
 
 figure(1)
 for i=1:N
     plot(t,y(i,:))
     hold on
 end
-
 title('Spiking Neuron')
-xlabel('Time (in ms)')
+xlabel('Time (in s)')
 ylabel('Membrane Potential (in Volts)')
-=======
-% Init Neuron Type values
->>>>>>> 6eedc0bb8bb23e467b382fc004c19ee78529c5eb
