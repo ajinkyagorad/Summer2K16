@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 % Init Neuron Type values
 %C(pF) kz(?S/V) Er(mV) Et(mV) a (KHz) b(nS) c(mV) d(pA) vpeak(mV)
 type = 'RS';
@@ -66,3 +67,6 @@ end
 title('Spiking Neuron')
 xlabel('Time (in ms)')
 ylabel('Membrane Potential (in Volts)')
+=======
+% Init Neuron Type values
+>>>>>>> 6eedc0bb8bb23e467b382fc004c19ee78529c5eb

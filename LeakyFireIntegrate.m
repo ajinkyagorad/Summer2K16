@@ -23,8 +23,11 @@ B = gL*EL ;
 
 y = zeros(N,M);
 % init condition
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 6eedc0bb8bb23e467b382fc004c19ee78529c5eb
 y(:,1) = EL; 
 
 %runge kutta implementation
@@ -33,7 +36,11 @@ for i = 1:M-1
     y1 = y(:,i) + k1*h ;                    % LHS @t = t0 + h
     k2 = -A*y1 + ( B + I(:,i+1) )/C;        % RHS @t = t0 + h
     y(:,i+1) = y(:,i) + 0.5*(k1+k2)*h ;     % @t = t0 + h
+<<<<<<< HEAD
     y( (y(:,i+1)>=VT) ,i+1) = EL;
+=======
+    y((y(:,i+1)>=VT),i+1) = EL;
+>>>>>>> 6eedc0bb8bb23e467b382fc004c19ee78529c5eb
 end
 
 t = 0.1:0.1:500;
