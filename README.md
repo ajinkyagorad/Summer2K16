@@ -12,3 +12,5 @@ Simulating different neuron models at different current levels
 ![LI&F](https://raw.githubusercontent.com/ajinkyagorad/Summer2K16/master/img/LeakyIntegrateandFire.JPG)
 ###Izhikevich Model
 ![I_M](https://raw.githubusercontent.com/ajinkyagorad/Summer2K16/master/img/Izhikevich_model.JPG)
+#### For a current Pulse
+![I_P](https://raw.githubusercontent.com/ajinkyagorad/Summer2K16/master/img/IzhiPulse.JPG)
