@@ -1,6 +1,6 @@
 % Init Neuron Type values
 %C(pF) kz(?S/V) Er(mV) Et(mV) a (KHz) b(nS) c(mV) d(pA) vpeak(mV)
-type = 'RS';
+type = 'IB';
 if type == 'RS'
    C =  100E-12;   Kz=  0.7E-6;   Er=  -60E-3;   Et=  -40E-3;   a =  0.03E3;
    b =  -2E-9;   c =  -50E-3;   d =  100E-12;   Vpeak=35E-3;
