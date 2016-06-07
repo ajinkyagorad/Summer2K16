@@ -1,10 +1,10 @@
 # Neuromorphic Engineering _Spiking Neural Network Simulation_
 
 * Leaky Integrate and Fire Model
-* ![Runge-Kutta Method](https://en.wikipedia.org/wiki/Runge–Kutta_methods) for solving differential equation 
-* Solving simplified Neural Equation
-* Implementing a single neuron
-
+* ![Runge-Kutta Method](https://en.wikipedia.org/wiki/Runge–Kutta_methods) for solving differential equation using 4th order
+* Izhikevich Model
+* Hodgekin Huxley Model
+* Implementing a single Neuron based on above model
 
 ##Results
 Simulating different neuron models at different current levels
