@@ -24,7 +24,7 @@ I = zeros(N,M);
 for i = 1:N
     %I(i,1:M) = 400^-12 ; %(1 + alpha*i)*Ic;
      for k=1:M
-         I(i,k) = (1-heaviside(k-M/2))* 20*i*10^-12 ;
+         I(i,k) = (1-heaviside(k-M/2))*50*10^-12 ;
      end
     % I(i,1:M) = 600*10^-12 ;
 end
@@ -39,7 +39,7 @@ U(:,1) = 0;
 F = @(t,V,U,I) (Kz*(V-Et).*(V-Er)-U+I)/C ; 
 G = @(t,V,U) a*(b*(V-Er)-U) ; 
 
-%runge kutta implementation
+%runge kutta implementation 4th order
 for i = 1:M-1 
     k1 = F(i,       y(:,i),          U(:,i),          (I(:,i)+I(:,i+1))/2 );
     L1 = G(i,       y(:,i),          U(:,i));
@@ -58,6 +58,7 @@ for i = 1:M-1
 end
 
 t = h:h:Tmax;
+% plot both on one plot only
 figure(1)
 subplot(2,1,1)
 for i=1:N
