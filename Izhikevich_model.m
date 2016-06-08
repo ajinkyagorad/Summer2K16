@@ -24,7 +24,7 @@ I = zeros(N,M);
 for i = 1:N
     %I(i,1:M) = 400^-12 ; %(1 + alpha*i)*Ic;
      for k=1:M
-         I(i,k) = (1-heaviside(k-M/2))*50*10^-12 ;
+         I(i,k) = (1-heaviside(k-M/2))*i*200*10^-12 ;
      end
     % I(i,1:M) = 600*10^-12 ;
 end
@@ -71,10 +71,16 @@ ylabel('Current in A')
 hold off
 subplot(2,1,2)
 for i=1:N
+    figure(1)
     plot(t,y(i,:))
     hold on
+    figure(2)
+    plot(U(i,:),y(i,:))
 end
 hold off
 title('Spiking Neuron')
 xlabel('Time (in s)')
 ylabel('Membrane Potential (in Volts)')
+
+
+% 
