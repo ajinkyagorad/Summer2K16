@@ -6,6 +6,9 @@
 * Hodgekin Huxley Model
 * Implementing a single Neuron based on above model
 
+* Things to do 
+* -[ ] Apply neural learning rule," two neurons fire together wire together"
+
 ##Results
 Simulating different neuron models at different current levels
 ###Leaky Integrate and Fire Model
