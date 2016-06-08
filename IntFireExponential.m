@@ -1,6 +1,6 @@
 % Init Neuron Type values
 %C(pF) gL(ns) EL(mV) VT (mV) ?T (mV) a(nS) ?w(ms) b(pA) Vr(mV)
-type = 'IB';
+type = 'CH';
 if type == 'RS'
    C =  200E-12;   gL =10E-9; EL=-70E-3; VT =-50E-3; deltaT = 2E-3;
    a = 2E-9;       Tw=30E-3;  b=0;      Vr = -58E-3;
@@ -34,8 +34,8 @@ U = zeros(N,M);
 y(:,1) = Vr;
 U(:,1) = 0;
 
-
-F = @(t,V,U,I) (-gL*(V-EL)+gL*deltaT*exp((V-VT)/deltaT)-U+I)/C ; 
+%corrected, it  should be  +gl instead of -
+F = @(t,V,U,I) (gL*(V-EL)+gL*deltaT*exp((V-VT)/deltaT)-U+I)/C ; 
 G = @(t,V,U) (a*(V-EL)-U)/Tw; 
 
 %runge kutta implementation 4th order
@@ -56,7 +56,7 @@ for i = 1:M-1
     U((y(:,i+1)>=0),i+1) = U((y(:,i+1)>=0),i+1) + b;
 end
 
-t = h:h:Tmax;
+t = h:h:Tmax;   
 % plot both on one plot only
 figure(1)
 subplot(2,1,1)
