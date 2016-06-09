@@ -13,7 +13,7 @@ elseif type == 'CH'
 end
 Vpeak=0;
 
-N = 4; % No of neurons
+N = 1; % No of neurons
 h = 0.1E-3; % time step
 Tmax = 0.5; %max time
 M = ceil(Tmax/h); % max time index i.e no. of columns (no. of delta_T time intervals that amount to T)
