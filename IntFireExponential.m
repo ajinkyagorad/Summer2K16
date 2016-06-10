@@ -23,7 +23,8 @@ I = zeros(N,M);
 for i = 1:N
     %I(i,1:M) = 400^-12 ; %(1 + alpha*i)*Ic;
      for k=1:M
-         I(i,k) = (1-heaviside(k-M/2))*i*20*10^-12 ;
+         %I(i,k) = (1-heaviside(k-M/2))*i*20*10^-12 ;
+         I(I,k) = i*20*10^-12;
      end
     % I(i,1:M) = 600*10^-12 ;
 end
@@ -34,7 +35,6 @@ U = zeros(N,M);
 y(:,1) = Vr;
 U(:,1) = 0;
 
-%corrected, it  should be  +gl instead of -
 F = @(t,V,U,I) (gL*(V-EL)+gL*deltaT*exp((V-VT)/deltaT)-U+I)/C ; 
 G = @(t,V,U) (a*(V-EL)-U)/Tw; 
 
