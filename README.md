@@ -8,6 +8,7 @@
 
 * Things to do 
 * -[ ] Apply neural learning rule," two neurons fire together wire together"
+* -[ ] current response modelling with voltage spike to the neuron
 
 ##Results
 Simulating different neuron models at different current levels
@@ -17,3 +18,8 @@ Simulating different neuron models at different current levels
 ![I_M](https://raw.githubusercontent.com/ajinkyagorad/Summer2K16/master/img/Izhikevich_model.JPG)
 #### For a current Pulse
 ![I_P](https://raw.githubusercontent.com/ajinkyagorad/Summer2K16/master/img/IzhiPulse.JPG)
+
+###Learning of neurons
+It is the change of strengths of synapses. These changes occur due to change in number
+Of receptors on the post-synaptic neuron. This neural is responsible for learning (i.e. change of weights)
+Known by the spiking activity and relation between voltage spiking.
